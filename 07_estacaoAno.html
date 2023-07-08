@@ -6,11 +6,30 @@
     */
 
     //ENTRADA
+    let hemisferio = prompt("Em qual hemisfério você está? (N-Norte, S-Sul): ").toUpperCase().trim();
+    let mes = prompt("Digite o mês atual (1-12): ").trim();
+    let estacao;
 
-    
+
     //PROCESSAMENTO
-
+    switch (hemisferio) {
+        case "N":
+            if (mes >= 3 && mes <= 5) estacao = "Primavera";
+            else if (mes >= 6 && mes <= 8) estacao = "Verão";
+            else if (mes >= 9 && mes <= 11) estacao = "Outono";
+            else estacao = "Inverno";
+            break;
+        case "S":
+            if (mes >= 3 && mes <= 5) estacao = "Outono";
+            else if (mes >= 6 && mes <= 8) estacao = "Inverno";
+            else if (mes >= 9 && mes <= 11) estacao = "Primavera";
+            else estacao = "Verão";
+            break;
+        default: alert(`hemisféro inválido`)
+            break;
+    }
 
     //SAÍDA
+    alert(`A estação do ano correspondente é: ${estacao}`);
 
 </script>

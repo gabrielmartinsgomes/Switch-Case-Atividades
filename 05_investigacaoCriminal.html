@@ -11,9 +11,47 @@
     */
 
     //ENTRADA
+    const tele = prompt(`telefonou para a vítima? Responda com Sim ou Não.`).trim().toLowerCase()
+    const local = prompt(`esteve no local do crime? (sim ou não)`).trim().toLowerCase()
+    const mora = prompt(`mora perto da vítima? (sim ou não)`).trim().toLowerCase()
+    const dever = prompt(`devia para a vítima? (sim ou não)`).trim().toLowerCase()
+    const work = prompt(`já trabalhou com a vítima? (sim ou não)`).trim().toLowerCase()
 
-    
+
     //PROCESSAMENTO
+    let provas = 0
+    switch (tele) {
+        case "sim":
+            provas++
+    }
+    switch (local) {
+        case "sim":
+            provas++
+    }
+    switch (mora) {
+        case "sim":
+            provas++
+    }
+    switch (dever) {
+        case "sim":
+            provas++
+    }
+    switch (work) {
+        case "sim":
+            provas++
+    }
+    switch (provas) {
+        case 2: alert('Você é suspeita!')
+            break;
+        case 3:
+        case 4:
+            alert('Você é um Cúmplice!')
+            break;
+        case 5: alert("Você é um Assasino!")
+            break;
+        default: alert("Você está liberado(a)")
+            break;
+    }
 
 
     //SAÍDA

@@ -4,10 +4,21 @@
 
     // ENTRADA
 
-    
-    // PROCESSAMENTO
+    let letra = prompt(`Informe uma letra`).trim().toLowerCase()
 
-    
+    // PROCESSAMENTO
+    switch (letra) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            alert(`Essa letra uma vogal`)
+            break;
+        default:
+            alert(`não é uma vogal`)
+            break;
+    }
     // SAÍDA
 
 </script>
