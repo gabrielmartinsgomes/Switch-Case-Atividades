@@ -15,32 +15,31 @@
 
     //PROCESSAMENTO
     let mensagemFinal = "O resultado da operação é "
-    let resultado = 0
     switch (operacao) {
         case "+":
-            resultado = numUm + numDois
-            mensagemFinal = mensagemFinal + resultado
+            operacao = numUm + numDois
+            mensagemFinal = mensagemFinal + operacao
             break;
 
         case "-":
-            resultado = numUm - numDois
-            mensagemFinal = mensagemFinal + resultado
+            operacao = numUm - numDois
+            mensagemFinal = mensagemFinal + operacao
             break;
 
         case "/":
-            resultado = numUm / numDois
-            mensagemFinal = mensagemFinal + resultado
+            operacao = numUm / numDois
+            mensagemFinal = mensagemFinal + operacao
             break;
 
         case "*":
-            resultado = numUm * numDois
-            mensagemFinal = mensagemFinal + resultado
+            operacao = numUm * numDois
+            mensagemFinal = mensagemFinal + operacao
             break;
         default:
             alert("Valor Inválido!");
             break;
     }
-    switch (resultado % 2) {
+    switch (operacao % 2) {
         case 0:
             mensagemFinal = mensagemFinal + `, esse número é par`
             break;
@@ -48,7 +47,7 @@
             mensagemFinal = mensagemFinal + `, esse número é ímpar`
 
     }
-    switch (resultado < 0) {
+    switch (operacao < 0) {
         case true:
             mensagemFinal = mensagemFinal + ", o número é negativo"
             break;
@@ -59,7 +58,7 @@
             mensagemFinal = mensagemFinal + ", o número é neutro"
             break;
     }
-    switch (resultado) {
+    switch (operacao) {
         case Number.isInteger(resultado):
             mensagemFinal = mensagemFinal + ` e inteiro`
             break;
