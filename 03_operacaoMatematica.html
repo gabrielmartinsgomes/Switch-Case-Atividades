@@ -36,14 +36,36 @@
             resultado = numUm * numDois
             mensagemFinal = mensagemFinal + resultado
             break;
-            default: 
+        default:
             alert("Valor Inválido!");
             break;
     }
-    switch (resultado%2) {
+    switch (resultado % 2) {
         case 0:
             mensagemFinal = mensagemFinal + `, esse número é par`
-            
+            break;
+        case 1:
+            mensagemFinal = mensagemFinal + `, esse número é ímpar`
+
+    }
+    switch (resultado < 0) {
+        case true:
+            mensagemFinal = mensagemFinal + ", o número é negativo"
+            break;
+        case false > 0:
+            mensagemFinal = mensagemFinal + ", o número é positivo"
+            break;
+        default:
+            mensagemFinal = mensagemFinal + ", o número é neutro"
+            break;
+            switch(resultado) {
+                case Number.isInteger(resultado):
+                mensagemFinal = mensagemFinal + ` e inteiro`
+                break;
+                default: 
+                mensagemFinal = mensagemFinal + ` e decimal`
+                break;
+            }
     }
 
 
